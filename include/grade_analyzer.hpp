@@ -15,6 +15,7 @@ double calculateAverage(double total, int count);
 char determineLetterGrade(double average);
 bool isPassing(double average);
 bool isValidScore(double score);
+double getValidScore(int scoreNumber);
 
 // Required output helper
 void printGradeReport(double total, double average, char letterGrade, bool passing);

@@ -11,29 +11,9 @@ int main() {
     cout << "Grade Analyzer" << endl;
     cout << endl;
 
-    cout << "Enter score 1: ";
-    cin >> score1;
-
-    while (!isValidScore(score1)) {
-        cout << "Invalid score. Enter a score from 0 to 100: ";
-        cin >> score1;
-    }
-
-    cout << "Enter score 2: ";
-    cin >> score2;
-
-    while (!isValidScore(score2)) {
-        cout << "Invalid score. Enter a score from 0 to 100: ";
-        cin >> score2;
-    }
-
-    cout << "Enter score 3: ";
-    cin >> score3;
-
-    while (!isValidScore(score3)) {
-        cout << "Invalid score. Enter a score from 0 to 100: ";
-        cin >> score3;
-    }
+    score1 = getValidScore(1);
+    score2 = getValidScore(2);
+    score3 = getValidScore(3);
 
     double total = calculateTotal(score1, score2, score3);
     double average = calculateAverage(total, SCORE_COUNT);
