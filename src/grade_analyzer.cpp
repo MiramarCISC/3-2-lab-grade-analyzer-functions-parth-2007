@@ -23,12 +23,16 @@ double calculateAverage(double total, int count) {
 // Returns 'D' for averages 60 or higher.
 // Returns 'F' otherwise.
 char determineLetterGrade(double average) {
-    if(average >= 90) return 'A';
-    if(average >= 80) return 'B';
-    if(average >= 70) return 'C';
-    if(average >= 60) return 'D';
-
-    return 'F';
+    if (average >= 90)
+        return 'A';
+    else if (average >= 80)
+        return 'B';
+    else if (average >= 70)
+        return 'C';
+    else if (average >= 60)
+        return 'D';
+    else
+        return 'F';
 }
 
 // Returns true when an average is passing (70 or higher)
@@ -64,10 +68,5 @@ void printGradeReport(double total, double average, char letterGrade, bool passi
     cout << "Total: " << total << endl;
     cout << "Average: " << average << endl;
     cout << "Letter Grade: " << letterGrade << endl;
-
-    if (passing) {
-        cout << "Status: Passing" << endl;
-    } else {
-        cout << "Status: Not Passing" << endl;
-    }
+    cout << "Status: " << (passing ? "Passing" : "Not Passing") << endl;
 }
